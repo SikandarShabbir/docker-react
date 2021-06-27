@@ -14,9 +14,9 @@ RUN npm run build
  #   && ln -s /usr/local/bin/docker-entrypoint.sh /
 
 #FROM nginx
-FROM nginx:alpine
+#FROM nginx:alpine
 
-COPY toborFront.conf /etc/nginx/conf.d/
+#COPY toborFront.conf /etc/nginx/conf.d/
 #EXPOSE 8080
 
 EXPOSE 80
