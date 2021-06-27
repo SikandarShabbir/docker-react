@@ -4,14 +4,14 @@ WORKDIR '/app'
 
 COPY package.json .
 
-RUN npm install
+RUN npm install -g npm@7.18.1
 
 COPY . .
 
 RUN npm run build
 
-RUN chmod 777 /usr/local/bin/docker-entrypoint.sh \
-    && ln -s /usr/local/bin/docker-entrypoint.sh /
+#RUN chmod 777 /usr/local/bin/docker-entrypoint.sh \
+ #   && ln -s /usr/local/bin/docker-entrypoint.sh /
 
 FROM nginx
 
