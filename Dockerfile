@@ -10,6 +10,8 @@ COPY . .
 
 RUN npm run build
 
+RUN npm i react-scripts
+
 #RUN chmod 777 /usr/local/bin/docker-entrypoint.sh \
  #   && ln -s /usr/local/bin/docker-entrypoint.sh /
 
