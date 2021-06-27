@@ -10,6 +10,9 @@ COPY . .
 
 RUN npm run build
 
+RUN chmod 777 /usr/local/bin/docker-entrypoint.sh \
+    && ln -s /usr/local/bin/docker-entrypoint.sh /
+
 FROM nginx
 
 EXPOSE 80
